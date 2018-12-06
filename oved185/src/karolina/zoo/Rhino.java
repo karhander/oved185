@@ -8,7 +8,7 @@ public class Rhino extends Animal{
 	
 	@Override
 	public String toString() {
-		return "[Rhino: " + name "]";  
+		return "[Rhino " + getName() + "]";
 	}
 
 }

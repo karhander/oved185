@@ -13,7 +13,7 @@ public class Cage<T extends Animal> { // T means Template, its advantage is that
 	private int id;
 	private int max;
 	
-	public Cage(int id, int max) {   //this methods creates a new cage
+	public Cage(int max) {   //this methods creates a new cage
 		guests = new HashSet<>();  //understands that guests is a set of Animal, there is no need to specify the type of the HashSet
 		lastId += 1;      //means same as ++
 		this.id = lastId;
@@ -25,6 +25,7 @@ public class Cage<T extends Animal> { // T means Template, its advantage is that
 	}
 	
 	public boolean add(T animal) {    //adds animal to the cage
+		// TODO: reject duplicated names
 		if(max == guests.size()) {
 			return false;
 		}
@@ -44,6 +45,9 @@ public class Cage<T extends Animal> { // T means Template, its advantage is that
 		
 		return Optional.empty();
 	}
+	
+	// TODO: check animal in cage?
+// boolean isPresent(String name):
 	
 	@Override  //it's not born in this class, but overrides a method already existing in the other class
 		public String toString() {
