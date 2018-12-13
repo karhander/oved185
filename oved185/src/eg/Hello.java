@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class Hello {
 	public static void main(String[] args) {
+
 		System.out.println("Hello @" + LocalDate.of(2018, Month.JANUARY, 5));
 
 		System.out.println("Single is: " + findSingle(new int[] { 1, 3, 2, 2, 1 }));
@@ -104,8 +105,7 @@ public class Hello {
 				return entry.getKey();
 			}
 		}
-		
-		
+				
 		//does the same as the one above
 //		Iterator<Integer> it = counters.keySet().iterator();
 //		while(it.hasNext()) {
@@ -115,6 +115,7 @@ public class Hello {
 //				}
 //		}
 	}
+	
 }
 
 	/* MY TRY:
@@ -133,4 +134,3 @@ public class Hello {
 	 * 
 	 * return single; }
 	 */
-
